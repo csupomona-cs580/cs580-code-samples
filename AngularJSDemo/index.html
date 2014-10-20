@@ -1,0 +1,25 @@
+<html ng-app="phonecatApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+
+<body ng-controller="PhoneListCtrl">
+
+  <hr>
+  
+  <ul>
+    <li ng-repeat="phone in phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+
+  <hr>
+
+  <p>Input new phone in the input box:</p>
+  <p>Name: <input type="text" ng-model="newPhone" value="John"><button ng-click="addPhone()">Add</button></p>
+  <p ng-bind="newPhone"></p>
+
+</body>
+</html>
